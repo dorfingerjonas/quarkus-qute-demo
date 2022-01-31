@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicles</title>
+</head>
+<style>
+    body {
+        font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div {
+        border: 2px solid cornflowerblue;
+        margin: 10px;
+        padding: 0 10px;
+        transition: all 150ms ease-in-out;
+    }
+
+    div:hover {
+        background-color: cornflowerblue;
+        color: white;
+    }
+</style>
+<body>
+{#for vehicle in vehicles}
+    <div>
+        <p>Brand: {vehicle.brand}</p>
+        <p>Model: {vehicle.model}</p>
+    </div>
+{/for}
+</body>
+</html>
