@@ -26,14 +26,14 @@ public class VehicleResource {
             new Vehicle("VW", "Golf GTI")
     );
 
-    @CheckedTemplate
-    public static class Templates {
-        public static native TemplateInstance vehicle(List<Vehicle> vehicles);
-    }
-
     @GET
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance getVehicles() {
         return Templates.vehicle(vehicles);
+    }
+
+    @CheckedTemplate
+    public static class Templates {
+        public static native TemplateInstance vehicle(List<Vehicle> vehicles);
     }
 }
